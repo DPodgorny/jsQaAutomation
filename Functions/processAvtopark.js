@@ -1,3 +1,5 @@
+let readline = require('readline-sync');
+
 module.exports.sortCars = sortCars;
 module.exports.countPrice = countPrice;
 module.exports.startFiltering = startFiltering;
@@ -18,9 +20,9 @@ function sortCars(avtoparkArray) {
 //Part 2: Count overal price of avtopark
 function countPrice(avtopark) {
 
-    var price = 0;
+    let price = 0;
 
-    for (var a = 0; a < avtopark.length; a++) {
+    for (let a = 0; a < avtopark.length; a++) {
 
         price = price + avtopark[a].price;
     }
@@ -34,7 +36,7 @@ function countPrice(avtopark) {
 //Ask wether filtering required
 function startFiltering(avtoparkArray) {
 
-    var requireSelect = readline.question('Do you want to filter avtopark? y/n \n');
+    let requireSelect = readline.question('Do you want to filter avtopark? y/n \n');
 
     if (requireSelect === 'y') {
 
@@ -56,8 +58,7 @@ function startFiltering(avtoparkArray) {
 //Filter list depending on parameter
 function filter(avtoparkArray) {
 
-    var filterParam = readline.question('Select parameter for filtering: \n1. By max speed \n2. By price \n3. By consumption\n');
-    var unit;
+    let filterParam = readline.question('Select parameter for filtering: \n1. By max speed \n2. By price \n3. By consumption\n');
 
     switch (filterParam) {
 
@@ -80,12 +81,12 @@ function filter(avtoparkArray) {
             break;
     }
 
-    var minValue = readline.question('Enter min value \n');
-    var maxValue = readline.question('Enter max value \n');
+    let minValue = readline.question('Enter min value \n');
+    let maxValue = readline.question('Enter max value \n');
 
-    var filteredAvtopark = [];
+    let filteredAvtopark = [];
 
-    for (var a = 0; a < avtoparkArray.length; a++) {
+    for (let a = 0; a < avtoparkArray.length; a++) {
 
         if (avtoparkArray[a][filterParam] >= minValue) {
 
@@ -103,7 +104,7 @@ function filter(avtoparkArray) {
 //Ask wether future filtering required
 function continueFiltering(filteredAvtopark, filterParam) {
 
-    var continueCheck = readline.question('Do you want to select more params? y/n ');
+    let continueCheck = readline.question('Do you want to select more params? y/n ');
 
     if (continueCheck === 'y') {
 
@@ -120,7 +121,7 @@ function continueFiltering(filteredAvtopark, filterParam) {
             return;
         }
 
-        for (var a = 0; a < filteredAvtopark.length; a++)
+        for (let a = 0; a < filteredAvtopark.length; a++)
         {
             console.log(filteredAvtopark[a].modelName);
         }

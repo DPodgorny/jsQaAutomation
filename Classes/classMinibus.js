@@ -1,4 +1,4 @@
-var car = require('./classCar')
+let car = require('./classCar')
 
 class minibus extends car {
 
