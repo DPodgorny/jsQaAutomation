@@ -1,6 +1,6 @@
+
 let processList = require('./Functions/processAvtopark');
 let objects = require('./Objects/declareObjects');
-
 
 //Create avtopark array
 let avtopark = [objects.bmw525, objects.mercedesVito, objects.hondaCRV, objects.toyotaPrius, objects.volkswagenPolo, objects.renaultDuster];
@@ -23,6 +23,3 @@ console.log('\nOverall price: ' + sumPrice + 'USD');
 
 //Part 3: Filter avtopark depending on entered params
 processList.startFiltering(avtoparkSorted);
-
-
-
