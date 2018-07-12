@@ -97,12 +97,12 @@ function filter(avtoparkArray) {
         }
     }
 
-    continueFiltering(filteredAvtopark, filterParam);
+    continueFiltering(filteredAvtopark);
 
 }
 
 //Ask wether future filtering required
-function continueFiltering(filteredAvtopark, filterParam) {
+function continueFiltering(filteredAvtopark) {
 
     let continueCheck = readline.question('Do you want to select more params? y/n ');
 
