@@ -1,7 +1,7 @@
-sedan = require('./classSedan');
-minibus = require('./classMinibus');
-suv = require('./classSuv');
-processList = require('./processAvtopark');
+sedan = require('./Classes/classSedan');
+minibus = require('./Classes/classMinibus');
+suv = require('./Classes/classSuv');
+processList = require('./Functions/processAvtopark');
 readline = require('readline-sync');
 
 //Create car objects
