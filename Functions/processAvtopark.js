@@ -67,7 +67,7 @@ function filter(avtoparkArray) {
         3: 'consumption'
     }
 
-    if (variants[filterParam] === undefined) {
+    if (!variants[filterParam]) {
 
         console.log('\nWrong choise. Try again\n');
         filter(avtoparkArray);
