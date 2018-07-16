@@ -60,25 +60,18 @@ function filter(avtoparkArray) {
 
     let filterParam = readline.question('Select parameter for filtering: \n1. By max speed \n2. By price \n3. By consumption\n');
 
-    switch (filterParam) {
+    let variants = {
 
-        case '1':
-           filterParam = 'maxSpeed';
-           break;
+        1: 'maxSpeed',
+        2: 'price',
+        3: 'consumption'
+    }
 
-        case '2':
-            filterParam = 'price';
-            break;
+    if (variants[filterParam] === undefined) {
 
-        case '3':
-            filterParam = 'consumption';
-            break;
-
-        default:
-            console.log('\nWrong choise. Try again\n');
-            filter(avtoparkArray);
-            return;
-            break;
+        console.log('\nWrong choise. Try again\n');
+        filter(avtoparkArray);
+        return;
     }
 
     let minValue = readline.question('Enter min value \n');
@@ -88,9 +81,9 @@ function filter(avtoparkArray) {
 
     for (let a = 0; a < avtoparkArray.length; a++) {
 
-        if (avtoparkArray[a][filterParam] >= minValue) {
+        if (avtoparkArray[a][variants[filterParam]] >= minValue) {
 
-            if (avtoparkArray[a][filterParam] <= maxValue) {
+            if (avtoparkArray[a][variants[filterParam]] <= maxValue) {
 
                 filteredAvtopark.push(avtoparkArray[a]);
             }
