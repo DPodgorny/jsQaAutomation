@@ -1,0 +1,23 @@
+{
+  "name": "avtopark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classCar.js",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DPodgorny/jsQaAutomation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DPodgorny/jsQaAutomation/issues"
+  },
+  "homepage": "https://github.com/DPodgorny/jsQaAutomation#readme"
+}
